@@ -9,48 +9,75 @@
 
 # create a class Bloom filter:
 
+
+
 from bitarray import bitarray
 import math 
 import mmh3
+import hashlib
+import md5
 
-class Bloom_Filter:
-    def __init__(self,array, percantage_postive, size, Hash_count):
-        self.size       = size
-        self.Barray     = bitarray(size)
-        self.Percentage = Percentage_postive
-        self.Hash_count = Hash_count
-        
-        self.Barray.setcall(0) 
-
-    def add(self, string):
-        for seed in xrange(self.hash_count):
-            total = mmh3.hash(string, seed) % self.size
-            return total
+class BloomFilter:
     
+    def __init__(self,array, size, hash_count):
+        self.size         = size
+        self.bloom_array  = bitarray(size)
+        self.hash_count   = hash_count
+        self.bloom_array.setcall(0) 
 
+    
     def lookup(self, size):
         return
 
 
-
 def false_postive_rate(bits_Filter, num_elemt , num_hash):
-
-    #  FPR = ( 1 - e^ ((-num_hash * num_elemt / bits_filter)))^ num_hash
-
     FPR = ( 1 - math.e**((-num_hash * num_elemt / bits_Filter)))** num_hash
-    return FPR
-    #  end false_postive_rate
+    FPR = round(FPR, 5) * 100
 
+    return FPR
+
+    
+def number_of_bits( items_expect , accpt_fpostive):    
+    bits_needed  = -items_expect*math.log(accpt_fpostive)/(math.log(2)**2)
+    
+    return bits_needed
+
+
+def num_hash_apply(bits_needed,items_expect):
+    how_many_hash = (bits_needed / items_expect) * math.log(2)
+    
+    return how_many_hash
+
+    
     
 def main():
 
+    Estimate_Array = 9999
+    FALSE_POSTIVE  = .01 
+    small_list=['hello', 'world' ,'hi', 'down', 'up', 'right', 'left']
     
-    FPR =  false_postive_rate( 100, 40, 5)
-    print "Your False Postive is: " , FPR
+    crypt = hashlib.sha1()
+    for words in small_list:
+        crypt.update(words)
+        print crypt.hexdigest()
+        
+        
+    print '\n'
+    
+    bits_filter = number_of_bits( Estimate_Array, FALSE_POSTIVE)
+    bits_filter = math.ceil(bits_filter)
+    
+    how_many_hash = num_hash_apply( bits_filter, Estimate_Array)
+    how_many_hash = math.ceil( how_many_hash)
+
+    FPR = false_postive_rate(bits_filter, Estimate_Array, how_many_hash)
+    
+    print "Estimated items %d\nBits in Array: %.2f\nNumber of Hash Func: %d" %( Estimate_Array, bits_filter, how_many_hash)
+
+    print "Your False Postive is: " , FPR, '%'
 
 
+
+    
 if __name__=='__main__':
     main()
-
-
- 
