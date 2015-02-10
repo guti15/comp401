@@ -44,8 +44,8 @@ class BloomFilter:
 
         # end encrypt
 
-    def decrypt(self, string):
-        crypt_sha1 = hashlib.sha1()
+    def decrypt(self, string):  # simlar to encrypt but this function
+        crypt_sha1 = hashlib.sha1() # breaks, by setting its self to False
         crypt_sha1.update(string)
         key = crypt_sha1.hexdigest() #  gives a hexadecimal number
         key = int(key, 16)           #  convert the number
@@ -61,8 +61,8 @@ class BloomFilter:
     
     
     def lookup(self, string):
-        am_I_here = True
-        am_I_here = self.decrypt(string) # create hash key 
+        am_I_here = True                 # Assume the function exist
+        am_I_here = self.decrypt(string) # create hash key and search
             
         if am_I_here == True:
             return True
@@ -74,7 +74,6 @@ class BloomFilter:
 
     def mark(self, string):
         mark_here = self.encrypt(string) # create hash key 
-        # self.bloom_array[mark_here] = 1  # Mark it with a 1
 
         # end mark
 
@@ -83,7 +82,7 @@ def false_postive_rate(bits_Filter, num_elemt , num_hash):
     FPR = (1 - math.e**((-num_hash * num_elemt / bits_Filter)))** num_hash
     FPR = round(FPR, 5) * 100
 
-    return FPR
+    return FPR                  #  function calculate the False postive
 
     
 def number_of_bits( items_expect , accpt_fpostive):    
@@ -105,10 +104,10 @@ def main():
     FALSE_POSTIVE  = .01        # with a 1% error 
 
     bits_filter = number_of_bits( Estimate_Array, FALSE_POSTIVE) 
-    bits_filter = math.ceil(bits_filter)
+    bits_filter = math.ceil(bits_filter) # number is a float, so we round 
     
     how_many_hash = num_hash_apply( bits_filter, Estimate_Array)
-    how_many_hash = int(math.ceil(how_many_hash))
+    how_many_hash = int(math.ceil(how_many_hash)) # round up
 
     bfilter = BloomFilter( Estimate_Array, how_many_hash) # establish Bloom
     
@@ -119,7 +118,7 @@ def main():
         bfilter.mark(words)        #  update the filter by marking it
         
     
-    ASK = True    
+    ASK = True                  # ask user to search for words
     while ASK == True:
         find = raw_input("Enter Word: ")
         visited = bfilter.lookup(find)
