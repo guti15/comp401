@@ -1,14 +1,17 @@
 # Auhor: Robert Gutierrez
-# Obj: Building a Bloom
+# Obj: Building a Bloom Filter
+# 
 # Bloom Filter:  A data structure that tells you quickly, wheather 
 # an elment might be in the set, or not in the set at all.
-# Hash Equation: gi(x) = h1(x) + ih2(x) % m,
-# m = bits in array, h = hashfunction, i = number of hashes 
-# libraries:  [md5: a cryptic hasing library]
-# [bitarray: create low memorey consuming array]
 # 
-# input: string 
-# output: "we might have your informataion"  or " sorry no data found" 
+# Hash Equation: gi(x) = h1(x) + ih2(x) % m,
+# m = bits in array, h = hashfunction, i = number of hashes
+# 
+# libraries:  [Hashlib: hashing library]
+# [bitarray: create low memorey consuming array][mmh3: hasing algorithm]
+# 
+# input: reads a file from UCI Machine Learning Repository 
+# output: "Yes, it exist"  or " sorry no record of word"
 
 
 # create a class Bloom filter:
