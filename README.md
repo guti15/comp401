@@ -34,9 +34,12 @@ Functionality of Bloom Filter:
 
 ####Resources Used:
 -----------------------
-[Wikipedia](http://en.wikipedia.org/wiki/Bloom_filter)
-[Python 2.7 documentation](https://docs.python.org/2.7/)
-[dev/maverick Blog](http://ilyasterin.com/blog/2010/02/implementing-bloom-filter-with-a-murmur-hash-function.html)
+
+1. [Wikipedia](http://en.wikipedia.org/wiki/Bloom_filter)
+2. [Python 2.7 documentation](https://docs.python.org/2.7/)
+3. [dev/maverick Blog](http://ilyasterin.com/blog/2010/02/implementing-bloom-filter-with-a-murmur-hash-function.html)
+4. [Less Hashing, Same Performance](http://www.eecs.harvard.edu/~michaelm/postscripts/rsa2008.pdf)
+
 
 
 
