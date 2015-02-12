@@ -15,14 +15,14 @@ The Draw Backs:  This data structure fails to tell us weather the item is in the
 ####Functionality
 ---------------------
 Functionality of Bloom Filter:
-* ######*mark* - reads in a string, which is then _Hashed_ with a unique code
-* ######*lookup* - searches for a string in the Bloom Filter. Checks every possible index
-* ######*number of bits* - Calculates how big the _Bit Array_ should be. Depends on False Positive.
-* ######*Num hash apply* - Calculate the adequate number of _Hash Functions_
-* ######*False postive rate* - Calculates the false postive given _bits in filter, number of hashes, number of elements_
+* *mark* - reads in a string, which is then _Hashed_ with a unique code
+* *lookup* - searches for a string in the Bloom Filter. Checks every possible index
+* *number of bits* - Calculates how big the _Bit Array_ should be. Depends on False Positive.
+* *Num hash apply* - Calculate the adequate number of _Hash Functions_
+* *False postive rate* - Calculates the false postive given _bits in filter, number of hashes, number of elements_
 
 
-####Complexity Analysis
+#### Complexity Analysis
 --------------------------
 **Bloom Filter mark:**
 	
