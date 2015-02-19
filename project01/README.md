@@ -18,11 +18,11 @@ Functionality of Bloom Filter:
 
 #### Complexity Analysis
 --------------------------
-* **Bloom Filter mark: O(log n)**
+* **Bloom Filter mark: O(1)**
   Once the hash function is created, then its simply marking  given index, turning the bit on in the bit array.
   
 
-* **Bloom Filter lookup: O(log n)** 
+* **Bloom Filter lookup: O(1)** 
   Similar to look up this _mark_ function this functions reads in a string. Then creates a hash function where it goes and checks whether the bit in the given index is _on_ or _off_. Once it fails with one index, we can be sure that string has not been marked in the array.
 
 
