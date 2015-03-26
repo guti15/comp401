@@ -16,7 +16,7 @@ int main()
  
    for( int j = 0; j < 100; j++)
     {
-      num = ( 1 +(rand() %  500 ));
+      num = ( 1 +(rand() %  150 ));
   
     BuildFile << num << endl;
     }
