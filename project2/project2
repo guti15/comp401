@@ -1,0 +1,12 @@
+  /Users/robertgutierrez/Desktop/comp401/project2:
+  total used in directory 168 available 20370356
+  drwxr-xr-x  11 robertgutierrez  staff    374 Mar 25 21:44 .
+  drwxr-xr-x   9 robertgutierrez  staff    306 Mar 25 20:31 ..
+  -rw-r--r--@  1 robertgutierrez  staff   6148 Mar 25 20:42 .DS_Store
+  -rw-r--r--   1 robertgutierrez  staff   7959 Mar 23 02:08 BNode.cpp
+  -rw-r--r--   1 robertgutierrez  staff   1050 Mar 18 19:45 BNode.h
+  -rw-r--r--   1 robertgutierrez  staff   1768 Mar 20 13:28 Btree.cpp
+  -rw-r--r--   1 robertgutierrez  staff    361 Mar 17 21:39 Btree.h
+  -rw-r--r--   1 robertgutierrez  staff     12 Mar 24 13:13 README.md
+  -rw-r--r--   1 robertgutierrez  staff   1569 Mar 25 21:42 driver.cpp
+  -rw-r--r--   1 robertgutierrez  staff    382 Mar 24 12:54 randomnum.txt
