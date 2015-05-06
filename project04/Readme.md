@@ -37,8 +37,9 @@
 
 
 * **attempt2** - Contain whole project
-  ..* XML Files
-  ..* Java Files
+  ⋅⋅* XML Files
+  ⋅⋅* Java Files
+
   
 
 
