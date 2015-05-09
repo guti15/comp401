@@ -37,8 +37,8 @@
 
 
 * **attempt2** - Contain whole project
-  * [Android Manifest](./app/src/main) 
-  * [Java Files](./app/src/main/java/com/example/robertgutierrez/attempt2)
+  * [Android Manifest](./attempt2/app/src/main) 
+  * [Java Files](./attempt2/app/src/main/java/com/example/robertgutierrez/attempt2)
 
   
 
